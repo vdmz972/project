@@ -1,25 +1,7 @@
 #1
 a=8
 b=9
-num=int(input('input number'))
-str=input('input word')
-print (a,b,str,num)
-#2
-time=int(input('input time in sec'))
-hour=int(time//3600)
-sec=int(time%60)
-minutes=int(time//60)
-print(f"{hour:.2f}:{minutes:.2f}:{sec:.2f}")
-#3
-n=input('input number')
-n1=n+n
-n2=n+n+n
-n3=int(n)+int(n1)+int(n2)
-print(n3)
-#4
-chislo=int(input('input number'))
-z=0
-y=0
+num=in
 x=chislo//10
 while x>0:
     x=chislo//10
