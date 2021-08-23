@@ -13,7 +13,10 @@ el2=0
 while i<10:
  i=i+2
  el1=result_list([i])
- e2=result_list({i+1})
+ el2=result_list({i+1})
+ if el2 == False:
+  break
+
  result_list.insert([i,el2])
  result_list.insert([i+1,el1])
 
