@@ -12,6 +12,20 @@ while i<6:
 print(z)
 
 
+a=["имя", "фамилия", "год рождения", "город проживания", "email", "телефон"]
+
+global c,b,i
+c=0
+i=0
+b=''
+while i<6:
+ key=input ('введите')
+ b[i]=key
+ i=i+1
+
+print(b)
+
+
 
 
 
