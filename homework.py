@@ -1,10 +1,19 @@
 #1
-result_list = [2, 'text', 456, 45.3, None]
-i=0
-while i<5:
- print(type(result_list[i]))
- i=i+1
+def s_calc():
 
+    try:
+        r_val = int(input("Первое число "))
+        h_val = int(input("Второе число "))
+        delen=r_val/h_val
+    except ValueError:
+        return
+    s_side = 2 * 3.14 * r_val * h_val
+    s_circle = 3.14 * r_val ** 2
+    s_full = s_side + 2 * s_circle
+    return delen
+
+delen = s_calc()
+print(f"Ответ {delen}")
 
 
 
