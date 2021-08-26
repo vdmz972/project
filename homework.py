@@ -1,24 +1,15 @@
 #2
+a=["имя", "фамилия", "год рождения", "город проживания", "email", "телефон"]
 i=0
-el=0
-result_list=[]
-while i<10:
-  print("введите:", i, "-й эелемент ")
-  el=input(i)
-  result_list.insert(i, el)
-  i=i+1
+b=0
+z=0
 
-el1=0
-el2=0
-while i<10:
- i=i+2
- el1=result_list([i])
- el2=result_list({i+1})
- if el2 == False:
-  break
+while i<6:
+ z=input(a[i])
+ b={a[i]:z[i]}
+ i=i+1
 
- result_list.insert([i,el2])
- result_list.insert([i+1,el1])
+print(z)
 
 
 
