@@ -18,16 +18,20 @@ while i<6:
 
 '''
 i=0
-
+z=''
 while i<6:
- arg1=a[i]
- arg2=b[i]
- print({arg1,arg2})
- i+=1
+  arg1=a[i]
+  arg2=b[i]
+  z=z+('  '+arg1+' '+arg2+' ')
+ #print({arg1,arg2})
+  i+=1
+
+
+
+print (z)
 
 
 my_sum(1,2)
-
 
 
 
