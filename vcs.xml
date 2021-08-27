@@ -10,6 +10,14 @@
           <option name="url" value="https://github.com/vdmz972/project/blob/main/homework.py" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/vdmz972/project/blob/vdmz972-task2/homework.py" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/vdmz972/project.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="C:\Users\EKhalvashi\PycharmProjects" />
