@@ -1,14 +1,19 @@
 #5
-my_list=[9,8,8,7,5,6,4,]
-new_number=float(input("Введите элемент рейтинга"))
-i=0
-for n in my_list:
-    if new_number<=n:
-        i+=1
-    else:
-        break
-        my_list.insert(i,new_number)
-        print(my_list)
+def sum():
+s=0
+while True:
+    in_list=input('Введите число,q для выхода').split()
+    for num in in_list:
+        if num.lower()=="q":
+            return s
+        else:
+            try:
+                s+=int(num)
+            except ValueError:
+                print('Для выхода нажмите q')
+                print(f"Сумма ={s}")
+
+                print(sum())
 
 
 
