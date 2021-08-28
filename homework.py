@@ -8,7 +8,8 @@ def int_func():
                 chars+=1
                 print(word.title()if chars==len(word) else f"{word}Только маленькие английские буквы")
 
-                int_func()
+       a=int_func()
+print(a)        
 
 
 
