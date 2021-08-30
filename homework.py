@@ -1,37 +1,19 @@
 #2
-def my_sum(arg1,arg2):
- return arg1,arg2
-a=["имя", "фамилия", "год рождения", "город проживания", "email", "телефон"]
-i=0
-b=[]
-z=''
 
-while i<6:
- z=str(input (a[i]))
- b.insert(i, z)
- i=i+1
+my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
 
-'''i=0
-while i<6:
- print(a[i],':',b[i])
- i+=1
 
-'''
-i=0
-z=''
-while i<6:
-  arg1=a[i]
-  arg2=b[i]
-  z=z+('  '+arg1+' '+arg2+' ')
- #print({arg1,arg2})
-  i+=1
+new_list = []
+i = 0
+n=0
+for n in my_list:
+     i += 1
+     new_list.append[max(n[i],n[i+1])]
 
 
 
-print (z)
+print(new_list)
 
-
-my_sum(1,2)
 
 
 
