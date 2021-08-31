@@ -1,10 +1,15 @@
 #4
-def my_func(x,y):
- try:
-    res=x**y
- except TypeError:
-    return  "Положительное х и целое отрицательное у"
- return res
- print(my_func(3,4,-1))
+my_list=[2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
+
+len_my_list=(len(my_list))
+new_list=[]
+i=0
+p=0
+l=set()
+while i<=13:
+  l.add(my_list[i])
+  i+=1
+new_list = [el for el in my_list if el % 2 == 0]
+print(l)
 
 
