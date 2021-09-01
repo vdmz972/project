@@ -1,19 +1,9 @@
 #5
-def sum():
-s=0
-while True:
-    in_list=input('Введите число,q для выхода').split()
-    for num in in_list:
-        if num.lower()=="q":
-            return s
-        else:
-            try:
-                s+=int(num)
-            except ValueError:
-                print('Для выхода нажмите q')
-                print(f"Сумма ={s}")
-
-                print(sum())
+from  functools import reduce
+def my_list(el1,el2):
+    return el1*el2
+new_list=[el for el in range(100,1001,2)]
+print(f"\n{new_list}\n Повторение номеров \n{reduce(my_list(,new_list))}")
 
 
 
