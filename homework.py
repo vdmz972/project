@@ -1,18 +1,7 @@
 #4
-import random
-my_list=[2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
-
-len_my_list=(len(my_list))
-new_list=[]
-i=0
-p=0
-my_dict = dict()
-
-l=set()
-while i<=13:
-  l.add(my_list[i])
-  i+=1
-new_list = [el for el in my_list if el % 2 == 0]
-print(l)
+from random import randint
+my_list =[randint(-10,10)for _in range(20)]
+new_list=[el for el in my_list if my_list.count(el)==1]
+print(f"Исходный лист\n{my_list}\n Лист без повторений\n{new_list}")
 
 
