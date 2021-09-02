@@ -1,12 +1,19 @@
 #1
 #!/usr/bin/python
 
-from sys import argv
-script_name, vir, stavk, prem = argv
-def zarpl(vir,stavk,prem):
-    return a
-a= int(vir)*int(stavk)+int(prem)
-print(f" Ваша зарплата составляет {a} рублей")
+my_f = open('test.txt', 'w')
+line = input('Введите текст \n')
+while line:
+    my_f.writelines(line)
+    line = input('Введите текст \n')
+    if not line:
+        break
+
+my_f.close()
+my_f = open('test.txt', 'r')
+content = my_f.readlines()
+print(content)
+my_f.close()
 
 
 
