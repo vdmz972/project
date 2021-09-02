@@ -1,16 +1,20 @@
 #2
 
-my_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-new_list = []
-i = 0
-for I in my_list:
-     
-     
-new_list = [el for el in my_list if my_list[i+1]>my_list[i]]
-I+=1
-
-print(new_list)
-
+my_file = open('file_2.txt', 'r')
+content = my_file.read()
+print(f'Содержимое файла: \n {content}')
+my_file = open('file_2.txt', 'r')
+content = my_file.readlines()
+print(f'Количество строк в файле - {len(content)}')
+my_file = open('file_2.txt', 'r')
+content = my_file.readlines()
+for i in range(len(content)):
+    print(f'Окличество символов {i + 1} - ой строки {len(content[i])}')
+my_file = open('file_2.txt', 'r')
+content = my_file.read()
+content = content.split()
+print(f'Общее количество слов - {len(content)}')
+my_file.close()
 
 
 
