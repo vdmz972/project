@@ -1,20 +1,19 @@
 #2
 
-my_file = open('text.txt', 'r')
-content = my_file.read()
-print(f'Содержимое файла: \n {content}')
-my_file = open('text.txt', 'r')
-content = my_file.readlines()
-print(f'в файле - {len(content)} строк')
-my_file = open('text.txt', 'r')
-content = my_file.readlines()
-for i in range(len(content)):
-    print(f'В {i + 1} - ой строке {len(content[i])} символов')
-my_file = open('text.txt', 'r')
-content = my_file.read()
-content = content.split()
-print(f'Всего слов - {len(content)}')
-my_file.close()
+class Road:
+    def __init__(self,length,width):
+        self.length=length
+        self.width=width
+        self.weigth=25
+        self.height=5
+
+    def raschet_mass(self):
+        mass_asph=self.length*self.weigth*self.weigth*self.height/1000
+        print(f"Для покрытия нужно\n{round(mass_asph)}")
+
+
+r=Road(5000,20)
+r.raschet_mass()
 
 
 
