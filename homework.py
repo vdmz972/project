@@ -1,13 +1,57 @@
 #4
-rus = {'One' : 'Один', 'Two' : 'Два', 'Three' : 'Три', 'Four' : 'Четыре'}
-new_file = []
-with open('text.txt', 'r') as file_obj:
-   
+class Car:
 
-    for i in file_obj:
-        i = i.split(' ', 1)
-        new_file.append(rus[i[0]] + '  ' + i[1])
-    print(new_file)
+    def __init__(self, name, speed, color, is_police=False):
+        self.name = name
+        self.speed = speed
+        self.color = color
+        self.is_police = is_police
 
-    with open('new_file.txt', 'w') as file_obj_2:
-        file_obj_2.writelines(new_file)
+    def go(self):
+        return f'The {self.name} went.'
+
+    def stop(self):
+        return f'\nThe {self.name} has stopped.'
+
+    def turn(self, direction):
+        return f'\nThe {self.name} turned {direction}'
+
+    def show_speed(self):
+        return f'\nYour speed is {self.speed}'
+
+
+class TownCar(Car):
+    def show_speed(self):
+        # def __init__(self, speed, color, name, is_police):
+        #     super().__init__(speed, color, name, is_police)
+        if self.speed > 60:
+            return f'\nYour speed is higher than allow! Your speed is {self.speed}'
+        else:
+            return f'Speed of {self.name} is normal'
+         class SportCar(Car):
+    pass
+
+
+class WorkCar(Car):
+    def show_speed(self):
+        if self.speed > 40:
+            return f'\nYour speed is higher than allow! Your speed is {self.speed}'
+        else:
+            return f'Speed of {self.name} is normal'
+
+
+class PoliceCar(Car):
+    pass
+
+
+town = TownCar('Audi', 70, 'blue', False)
+print('1:\n' + town.go(), town.show_speed(), town.turn('left'), town.turn('right'), town.stop())
+
+sport = SportCar('AudiRS', 170, 'red', False)
+print('2:\n' + sport.go(), sport.show_speed(), sport.turn('left'), sport.stop())
+
+work = WorkCar('WAZ', 30, 'red', False)
+print('3:\n' + work.go(), work.show_speed(), work.turn('right'), work.stop())
+
+police = PoliceCar('Kia', 100, 'yellow', True)
+print('4:\n' + work.go(), work.show_speed(), work.turn('right'), work.stop())
