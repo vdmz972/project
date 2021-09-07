@@ -1,16 +1,30 @@
 #5
-def summary():
-    try:
-        with open('file_5.txt', 'w+') as file_obj:
-            line = input('Введите цифры через пробел \n')
-            file_obj.writelines(line)
-            my_numb = line.split()
+class Stationery:
+    def __init__(self, title):
+        self.title = title
 
-            print(sum(map(int, my_numb)))
-    except IOError:
-        print('Ошибка в файле')
-    except ValueError:
-        print('Неправильно набран номер. Ошибка ввода-вывода')
-summary()
+    def draw(self):
+        return f'Запуск отрисовки'
 
 
+class Pen(Stationery):
+    def draw(self):
+        return f'Запуск отрисовки {self.title}'
+
+
+class Pencil(Stationery):
+    def draw(self):
+        return f'Запуск отрисовки {self.title}'
+
+
+class Handle(Stationery):
+    def draw(self):
+        return f'Запуск отрисовки {self.title}'
+
+
+pen = Pen('ручкой')
+print(pen.draw())
+pencil = Pencil('карандашем')
+print(pencil.draw())
+handle = Handle('маркером')
+print(handle.draw())
