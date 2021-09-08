@@ -39,7 +39,6 @@ class WorkCar(Car):
         else:
             return f'Speed of {self.name} is normal'
 
-
 class PoliceCar(Car):
     pass
 
