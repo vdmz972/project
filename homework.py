@@ -11,7 +11,6 @@ class Road:
         mass_asph=self.length*self.weigth*self.weigth*self.height/1000
         print(f"Для покрытия нужно\n{round(mass_asph)}")
 
-
 r=Road(5000,20)
 r.raschet_mass()
 
