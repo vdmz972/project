@@ -1,12 +1,32 @@
 #6
 
-#import json
+class Stationery:
+    def __init__(self, title):
+        self.title = title
 
-subj = {}
-with open('file_6.txt', 'r') as init_f:
-    for line in init_f:
-        subject, lecture, practice, lab = line.split()
-        subj[subject] = int(lecture) + int(practice) + int(lab)
-    print(f'Общее количество часов по предмету - \n {subj}')
+    def draw(self):
+        return f'Запуск отрисовки'
 
+
+class Pen(Stationery):
+    def draw(self):
+        return f'Запуск отрисовки {self.title}'
+
+
+class Pencil(Stationery):
+    def draw(self):
+        return f'Запуск отрисовки {self.title}'
+
+
+class Handle(Stationery):
+    def draw(self):
+        return f'Запуск отрисовки {self.title}'
+
+
+pen = Pen('ручкой')
+print(pen.draw())
+pencil = Pencil('карандашем')
+print(pencil.draw())
+handle = Handle('маркером')
+print(handle.draw())
 
