@@ -21,7 +21,6 @@ class Handle(Stationery):
     def draw(self):
         return f'Запуск отрисовки {self.title}'
 
-
 pen = Pen('ручкой')
 print(pen.draw())
 pencil = Pencil('карандашем')
