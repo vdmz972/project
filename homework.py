@@ -1,31 +1,25 @@
 #7
 
-import json
-profit = {}
-pr = {}
-prof = 0
-prof_aver = 0
-i = 0
-with open('file_7.txt', 'r') as file:
-    for line in file:
-        name, firm, earning, damage = line.split()
-        profit[name] = int(earning) - int(damage)
-        if profit.setdefault(name) >= 0:
-            prof = prof + profit.setdefault(name)
-            i += 1
-    if i != 0:
-        prof_aver = prof / i
-        print(f'Прибыль средняя - {prof_aver:.2f}')
-    else:
-        print(f'Прибыль средняя - отсутсвует. Все работают в убыток')
-    pr = {'средняя прибыль': round(prof_aver)}
-    profit.update(pr)
-    print(f'Прибыль каждой компании - {profit}')
+class ComplexNumber:
+    def __init__(self, a, b, *args):
+        self.a = a
+        self.b = b
+        self.z = 'a + b * i'
 
-with open('file_7.json', 'w') as write_js:
-    json.dump(profit, write_js)
+    def __add__(self, other):
+        print(f'Сумма z1 и z2 равна')
+        return f'z = {self.a + other.a} + {self.b + other.b} * i'
 
-    js_str = json.dumps(profit)
-    print(f'Создан файл с расширением json со следующим содержимым: \n '
-          f' {js_str}')
+    def __mul__(self, other):
+        print(f'Произведение z1 и z2 равно')
+        return f'z = {self.a * other.a - (self.b * other.b)} + {self.b * other.a} * i'
 
+    def __str__(self):
+        return f'z = {self.a} + {self.b} * i'
+
+
+z_1 = ComplexNumber(1, -2)
+z_2 = ComplexNumber(3, 4)
+print(z_1)
+print(z_1 + z_2)
+print(z_1 * z_2)
