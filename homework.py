@@ -1,9 +1,10 @@
 #1
 #!/usr/bin/python
 
+#!/usr/bin/python
 class Data:
     def __init__(self, day_month_year):
-        # self.day = day
+         #self.day = day
         # self.month = month
         # self.year = year
         self.day_month_year = str(day_month_year)
@@ -18,8 +19,8 @@ class Data:
         return int(my_date[0]), int(my_date[1]), int(my_date[2])
 
     @staticmethod
-    def valid(day, month, year):
-  
+    def validation(day, month, year):
+
         if 1 <= day <= 31:
             if 1 <= month <= 12:
                 if 2019 >= year >= 0:
@@ -37,10 +38,10 @@ class Data:
 
 today = Data('11 - 1 - 2001')
 print(today)
-print(Data.valid(11, 11, 2022))
-print(today.valid(11, 13, 2011))
+print(Data.validation(11, 11, 2022))
+print(today.validation(11, 13, 2011))
 print(Data.extract('11 - 11 - 2011'))
 print(today.extract('11 - 11 - 2020'))
-print(Data.valid(1, 11, 2000))
+print(Data.validation(1, 11, 2000))
 
     
