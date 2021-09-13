@@ -1,34 +1,31 @@
 #3
 
-class Cell:
-    def __init__(self, quantity):
-        self.quantity = int(quantity)
+class Error:
+    def __init__(self, *args):
+        self.my_list = []
 
-    def __add__(self, other):
-        return f'Две клетки - хорошо, а одна большая - лучше! Размер клетки равен: {self.quantity + other.quantity}'
+    def my_input(self):
 
-    def __sub__(self, other):
-        sub = self.quantity - other.quantity
-        return f'Клеточка стала меньше, теперь она равна: {sub} клеточкам' if sub > 0 else 'Клетка исчезла :('
+        # self.my_list = [int(i) for i in input('Введите значения через пробел ').split()]
+        # val = int(input('Введите значения и нажимайте Enter - '))
+        # self.my_list.append(val)
+        while True:
+            try:
+                val = int(input('Введите значения и нажимайте Enter - '))
+                self.my_list.append(val)
+                print(f'Текущий список - {self.my_list} \n ')
+            except:
+                print(f"Недопустимое значение - строка и булево")
+                y_or_n = input(f'Попробовать еще раз? Y/N ')
 
-    def __truediv__(self, other):
-        return self.quantity // other.quantity
-
-    def __mul__(self, other):
-        return self.quantity * other.quantity
-
-    def make_order(self, row):
-        result = ''
-        for i in range(int(self.quantity / row)):
-            result += '*' * row + '\n'
-        result += '*' * (self.quantity % row) + '\n'
-        return result
+                if y_or_n == 'Y' or y_or_n == 'y':
+                    print(try_except.my_input())
+                elif y_or_n == 'N' or y_or_n == 'n':
+                    return f'Вы вышли'
+                else:
+                    return f'Вы вышли'
+                
+try_except = Error(1)
+print(try_except.my_input())
 
 
-cell = Cell(24)
-cell_2 = Cell(2)
-print(cell + cell_2)
-print(cell - cell_2)
-print(cell / cell_2)
-print(cell * cell_2)
-print(cell.make_order(7))
